@@ -1,0 +1,16 @@
+doctype html
+block page
+  html.page(lang="ru")
+    head
+      block head
+        include components/head
+    body.page__body
+      .page__layout
+        //- helpers
+        include components/data
+        include components/mixins
+        block content
+        //- sprite
+        include components/sprite
+      block scripts
+        script(src="js/bundle.min.js")
